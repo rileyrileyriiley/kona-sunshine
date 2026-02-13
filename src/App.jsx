@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { StoreProvider } from './store/store';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -10,7 +10,7 @@ import Portfolio from './pages/Portfolio';
 export default function App() {
   return (
     <StoreProvider>
-      <BrowserRouter>
+      <HashRouter>
         <div className="min-h-screen bg-bg">
           <Navbar />
           <Routes>
@@ -21,7 +21,7 @@ export default function App() {
             <Route path="/portfolio" element={<Portfolio />} />
           </Routes>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </StoreProvider>
   );
 }
